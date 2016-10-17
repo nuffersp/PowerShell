@@ -1,0 +1,2 @@
+﻿get-addomain | select DeletedObjectsContainer
+get-adobject -server ap.tsacorp.com -filter 'objectclass -eq "user" -AND IsDeleted -eq $True' -IncludeDeletedObjects -properties IsDeleted,LastKnownParent | Format-List Name,IsDeleted,LastKnownParent,DistinguishedName
